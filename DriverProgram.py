@@ -1,10 +1,10 @@
-import configparser
+import ConfigParser
 import boto3
 import botocore
 import re
 import string
 
-config = configparser.RawConfigParser()
+config = ConfigParser.RawConfigParser()
 config.read('ConfigFile.properties')
 bucketname = config.get('s3Credentials', 's3.bucketname')
 secretkey = config.get('s3Credentials', 's3.secretaccesskey');
